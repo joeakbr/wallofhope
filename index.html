@@ -1,44 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wall of Hope</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-            font-size: 3em;
-        }
-        p {
-            max-width: 500px;
-            font-size: 1.2em;
-            margin-top: 1em;
-        }
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.9em;
-            color: #aaa;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wall of Hope</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>🌟 Selamat Datang di Wall of Hope</h1>
-    <p>Tempat di mana harapan dan impianmu bisa dituliskan, dibagikan, dan diabadikan.</p>
-    <footer>© 2025 Wall of Hope. Harapanmu ngga sendiri.</footer>
+  <header>
+    <h1>🌟 Wall of Hope</h1>
+    <button onclick="toggleForm()">+ Tulis Harapan</button>
+  </header>
+
+  <section id="form-section" class="hidden">
+    <form id="hopeForm">
+      <input type="text" id="name" placeholder="Nama (opsional)" />
+      <textarea id="hopeText" placeholder="Tulis harapanmu di sini..." required></textarea>
+      <select id="genre">
+        <option value="Umum">Pilih Genre</option>
+        <option value="Cinta">Cinta</option>
+        <option value="Karir">Karir</option>
+        <option value="Keluarga">Keluarga</option>
+        <option value="Impian">Impian</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+      <button type="submit">Kirim Harapan</button>
+    </form>
+  </section>
+
+  <main id="wall">
+    <!-- Harapan akan muncul di sini -->
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
